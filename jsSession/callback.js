@@ -1,3 +1,5 @@
+"use strict"
+
 // Waits 1000 milliseconds, then call function
 setTimeout(
   function(){
@@ -7,10 +9,9 @@ setTimeout(
 );
 
 function countDown(count){
-  var display = count;
   for(var i=count; i >= 0; i--){
     setTimeout(function(){
-      console.log(display--);
+      console.log(i);
     }, (count-i)*1000);
   }
 }
