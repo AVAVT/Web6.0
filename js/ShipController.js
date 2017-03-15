@@ -1,4 +1,6 @@
 class ShipController {
+  static get SHIP_SPEED(){ return 400; }
+
   constructor(x, y, spriteName, configs){
     this.sprite = Nakama.game.add.sprite(x, y, 'assets', spriteName);
     Nakama.game.physics.arcade.enable(this.sprite);
@@ -26,7 +28,21 @@ class ShipController {
     else{
       this.sprite.body.velocity.x = 0;
     }
+
+    if(Nakama.keyboard.isDown(this.configs.fire)){
+      this.tryFire();
+    }
+  }
+
+  tryFire(){
+    this.fire();
+  }
+
+  fire(){
+    new BulletController(
+      this.sprite.position,
+      new Phaser.Point(0, -1),
+      "BulletType1.png"
+    )
   }
 }
-
-ShipController.SHIP_SPEED = 400;

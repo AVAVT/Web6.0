@@ -83,12 +83,28 @@ var create = function(){
       }
     )
   );
+
+  Nakama.enemies = [];
+  Nakama.enemies.push(
+    new EnemyController(
+      300,
+      100,
+      "EnemyType1.png",
+      {
+        speed: 500
+      }
+    )
+  )
 }
 
 // update game state each frame
 var update = function(){
   Nakama.players.forEach(function(ship){
     ship.update();
+  });
+
+  Nakama.enemies.forEach(function(enemy){
+    enemy.update();
   });
 }
 
