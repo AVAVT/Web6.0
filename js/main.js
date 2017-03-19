@@ -93,11 +93,11 @@ var create = function(){
   Nakama.enemies.push(
     new EnemyController(
       300,
-      100,
+      250,
       "EnemyType1.png",
       {
         speed : 500,
-        health: 15
+        health: 150
       }
     )
   );
@@ -108,11 +108,11 @@ var create = function(){
     Nakama.enemies.push(
       new EnemyController(
         300,
-        100,
+        250,
         "EnemyType1.png",
         {
           speed : 500,
-          health: 15
+          health: 150
         }
       )
     );
