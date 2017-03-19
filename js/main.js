@@ -100,7 +100,23 @@ var create = function(){
         health: 15
       }
     )
-  )
+  );
+
+  Nakama.bullets = [];
+
+  setInterval(function(){
+    Nakama.enemies.push(
+      new EnemyController(
+        300,
+        100,
+        "EnemyType1.png",
+        {
+          speed : 500,
+          health: 15
+        }
+      )
+    );
+  }, 3000);
 }
 
 // update game state each frame
@@ -108,9 +124,15 @@ var update = function(){
   Nakama.players.forEach(function(ship){
     ship.update();
   });
-  
+
   Nakama.enemies.forEach(function(enemy){
     enemy.update();
+  });
+
+  Nakama.bullets.forEach(function(bullet){
+    if(bullet.update && typeof bullet.update == "function"){
+      bullet.update();
+    }
   });
 
   Nakama.game.physics.arcade.overlap(
@@ -121,7 +143,7 @@ var update = function(){
 }
 
 var onBulletHitEnemy = function(bulletSprite, enemySprite){
-  enemySprite.damage(1);
+  enemySprite.damage(bulletSprite.damage);
   bulletSprite.kill();
 }
 
