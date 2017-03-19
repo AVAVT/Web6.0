@@ -6,7 +6,9 @@ class BulletType2Controller extends BulletController{
   }
 
   update(){
+    // Call update of parent class
     super.update();
+
     // 1. Get a target if doesn't have target
     if(!this.target || !this.target.alive){
       this.getNewTarget();
