@@ -44,18 +44,5 @@ class ShipController {
     }
   }
 
-  fire(){
-    this.createBullet(new Phaser.Point(0, -1));
-    this.createBullet(new Phaser.Point(1, -5));
-    this.createBullet(new Phaser.Point(-1, -5));
-    this.createBullet(new Phaser.Point(1, -2));
-    this.createBullet(new Phaser.Point(-1, -2));
-  }
-
-  createBullet(direction){
-    new BulletType2Controller(
-      this.sprite.position,
-      direction
-    )
-  }
+  fire(){}
 }
