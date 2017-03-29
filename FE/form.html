@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <title>Form HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    function requestAjax(){
+      $.ajax(
+        {
+          // jsonplaceholder.typicode.com
+          url: 'https://jsonplaceholder.typicode.com/posts/',
+          method: 'GET'
+        }
+      ).then(
+        function(data) {
+          $("body").html(JSON.stringify(data));
+        }
+      );
+    }
+    </script>
+  </head>
+  <body>
+    <!--
+      Create -> POST
+      Read -> GET
+      Update -> PUT
+      Delete -> DELETE
+    -->
+
+    <form action="http://www.example.com/" method="get">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
+
+      <label for="gender_none">
+        <input type="radio" name="gender" value="0" id="gender_none">
+        Unspecified
+      </label>
+      <label for="gender_male">
+        <input type="radio" name="gender" value="1" id="gender_male">
+        Male
+      </label>
+      <label for="gender_female">
+        <input type="radio" name="gender" value="2" id="gender_female">
+        Female
+      </label>
+
+      <label>
+        <input type="checkbox" name="available" value="0">
+        Monday
+      </label>
+      <label>
+        <input type="checkbox" name="available" value="1">
+        Tuesday
+      </label>
+      <label>
+        <input type="checkbox" name="available" value="2" disabled>
+        Wednesday
+      </label>
+
+      <input type="email" maxlength="20">
+      <input type="number">
+      <input type="tel">
+
+
+      <input type="submit" value="Submit" name="submit">
+      <input type="button" value="Request AJAX" onclick="requestAjax();">
+      <input type="hidden" value="hiddenplux">
+    </form>
+  </body>
+</html>
