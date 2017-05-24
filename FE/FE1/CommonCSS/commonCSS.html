@@ -1,0 +1,545 @@
+<!doctype html>
+<html>
+<head>
+  <title>Common CSS properties (Basic)</title>
+  <style>
+  *,*:before,*:after{
+    box-sizing: border-box;
+  }
+  h3{
+    font-style: italic;
+    margin-top: 50px;
+  }
+  code{
+    overflow: auto;
+  }
+  .block_half{
+    width: 50%;
+    padding: 0 20px;
+    float:left;
+  }
+  .block_full{
+    clear:both;
+    padding: 0 20px;
+  }
+  .result_box{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  .code_block_html{
+    display: block;
+    border: 1px solid #B6A6CA;
+    border-radius: 4px;
+    background: #E1DEE9;
+    padding: 10px;
+  }
+  .code_block_css{
+    display: block;
+    border: 1px solid #f1bf98;
+    border-radius: 4px;
+    background: #eff8e2;
+    padding: 10px;
+  }
+
+  /* demos */
+  .font_family_demo {
+    font-family: "Comic Sans MS";
+  }
+  .font_size_demo{
+    font-size: 46px;
+  }
+  .font_style_demo{
+    font-style: italic;
+  }
+  .font_weight_demo{
+    font-weight: bold;
+  }
+  .color_demo{
+    color: deepskyblue;
+  }
+  .text_align_demo{
+    text-align: center;
+  }
+  .line_height_demo{
+    line-height: 4px;
+  }
+  .letter_spacing_demo{
+    letter-spacing: 10px;
+  }
+  .background_color_demo{
+    background-color: orange;
+  }
+  .background_image_demo{
+    background-image: url('rainbow.jpg');
+  }
+  .border_demo_detailed{
+      border-color: red;
+      border-style: solid;
+      border-width: 2px;
+  }
+  .border_demo_shorthand{
+    border: 2px solid red;
+  }
+
+  .width_demo{
+    width: 300px;
+    background-color: red;
+  }
+  .height_demo{
+    height: 300px;
+    background-color: blue;
+  }
+  .width_height_demo{
+    width: 300px;
+    height: 300px;
+    background-color: green;
+  }
+
+  .display_demo_inline{
+    background-color: orange;
+    display: inline;
+  }
+  .display_demo_block{
+    background-color: green;
+    display: block;
+  }
+  .display_demo_block_sized{
+    background-color: red;
+    display: block;
+    width: 400px;
+    height: 150px;
+  }
+  .display_demo_inline_block{
+    display: inline-block;
+    background-color: cyan;
+    width: 200px;
+    height: 150px;
+  }
+  .display_demo_none{
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <h1>Common CSS Properties (Basic)</h1>
+  <hr>
+  <h2>I.Font</h2>
+  <h3>font-family</h3>
+  <p>Set the font of the text</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="font_family_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .font_family_demo {
+        font-family: "Comic Sans MS";
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="font_family_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+  <h3>font-size</h3>
+  <p>Set the size of the text</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="font_size_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .font_size_demo {
+        font-size: 46px;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="font_size_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+  <h3>font-style</h3>
+  <p>Set the style of the text</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="font_style_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .font_style_demo{
+        font-style: italic;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="font_style_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+  <h3>font-weight</h3>
+  <p>Set the weight (strength) of the text</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="font_weight_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .font_weight_demo{
+        font-weight: bold;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="font_weight_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+
+
+  <hr>
+  <h2>II. Text</h2>
+  <h3>color</h3>
+  <p>Set the color of the text</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="color_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .color_demo{
+        color: deepskyblue;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="color_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+  <h3>text-align</h3>
+  <p>Set the alignment of the text</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="text_align_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .text_align_demo{
+        text-align: center;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="text_align_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+  <h3>line-height</h3>
+  <p>Set the height of each line of text</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="line_height_demo"&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .line_height_demo{
+        line-height: 4px;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="line_height_demo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+  </div>
+
+  <h3>letter-spacing</h3>
+  <p>Set the space between each character</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="letter_spacing_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .letter_spacing_demo{
+        letter-spacing: 10px;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="letter_spacing_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+
+
+  <hr>
+  <h2>III. Background</h2>
+  <h3>background-color</h3>
+  <p>Set the color for the background</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="background_color_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .background_color_demo{
+        background-color: orange;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="background_color_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+  <h3>background-image</h3>
+  <p>Set an image as the background</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="background_image_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .background_image_demo{
+        background-image: url('rainbow.jpg');
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="background_image_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+  <h3>background-image</h3>
+  <p>Set an image as the background</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="background_image_demo"&gt;Lorem ipsum&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .background_image_demo{
+        background-image: url('rainbow.jpg');
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="background_image_demo">Lorem ipsum</p>
+    </div>
+  </div>
+
+
+
+  <hr>
+  <h2>IV. Others</h2>
+  <h3>border</h3>
+  <p>Several properties that control the border around an element, including:</p>
+  <ul>
+    <li>border-color : color of the border</li>
+    <li>border-style : style of the border</li>
+    <li>border-width : thickness of the border</li>
+  </ul>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="border_demo_detailed"&gt;This paragraph has a red border.&lt;/p&gt;
+
+      &lt;p class="border_demo_shorthand"&gt;This paragraph looks the same but use a shorter css syntax.&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .border_demo_detailed{
+          border-color: red;
+          border-style: solid;
+          border-width: 2px;
+      }
+
+      /* all 3 properties can be merged into the shorthand property 'border': */
+      .border_demo_shorthand{
+        border: 2px solid red;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="border_demo_detailed">This paragraph has a red border.</p>
+      <p class="border_demo_shorthand">This paragraph looks the same but use a shorter css syntax.</p>
+    </div>
+  </div>
+
+  <h3>width and height</h3>
+  <p>Set the width and height of a block element.</p>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;p class="width_demo"&gt;My width is 300px!&lt;/p&gt;
+
+      &lt;p class="height_demo"&gt;My height is 300px!&lt;/p&gt;
+      &lt;p class="width_height_demo"&gt;Both my width and height are 300px!&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .width_demo{
+        width: 300px;
+      }
+      .height_demo{
+        height: 300px;
+      }
+      .width_height_demo{
+        width: 300px;
+        height: 300px;
+        background-color: green;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <p class="width_demo">My width is 300px!</p>
+      <p class="height_demo">My height is 300px!</p>
+      <p class="width_height_demo">Both my width and height are 300px!</p>
+    </div>
+  </div>
+
+  <h3>display</h3>
+  <p>Set the display type of an element. Common values are:</p>
+  <ul>
+    <li><strong>display: inline</strong>: the element is added to the current line of the document as if it's a text. &lt;a&gt; and &lt;span&gt; are common html tags that use this display type as default.</li>
+    <li><strong>display: block</strong>: the element take an entire line for itself. All content after it will be pushed to the next line. You can set the width and height of the element with CSS' <em>width</em> and <em>height</em> properties. &lt;p&gt;, &lt;div&gt; and &lt;h1&gt; are common tags that use this display type as default.</li>
+    <li><strong>display: inline-block</strong>: an inline element whose width and height can be set with CSS properties. &lt;img&gt; comes with this display type as default.</li>
+    <li><strong>display: none</strong>: and invisible element. It is not rendered by the browser and the user can't see it.</li>
+  </ul>
+  <div class="block_half">
+    <h5>HTML</h5>
+    <pre><code class="code_block_html">
+      &lt;div class="display_demo_inline"&gt;I'm an inline element. I get added to the current line.&lt;/div&gt;
+      &lt;div class="display_demo_inline"&gt;I'm an inline element. I get added to the current line.&lt;/div&gt;
+      &lt;div class="display_demo_inline"&gt;I'm an inline element. I get added to the current line.&lt;/div&gt;
+      &lt;div class="display_demo_inline"&gt;I'm an inline element. I get added to the current line.&lt;/div&gt;
+      &lt;div class="display_demo_inline"&gt;I'm an inline element. I get added to the current line.&lt;/div&gt;
+
+      &lt;div class="display_demo_block"&gt;I'm a block element. I take an entire line for myself.&lt;/div&gt;
+      &lt;div class="display_demo_block_sized"&gt;I'm also a block element. My width and height are resized but I still take an entire line for myself.&lt;/div&gt;
+
+      &lt;div class="display_demo_inline"&gt;I'm an inline element. I get added to the current line.&lt;/div&gt;
+      &lt;div class="display_demo_inline_block"&gt;I'm an inline-block element. I get added to current line but my width and height are resizable.&lt;/div&gt;
+      &lt;div class="display_demo_inline"&gt;I'm an inline element. I get added to the current line.&lt;/div&gt;
+
+      &lt;p&gt;There's a &lt;strong&gt;display: none&lt;/strong&gt; element below me, but you can't see it!&lt;/p&gt;
+      &lt;p class="display_demo_none"&gt;I'm a &lt;strong&gt;display: none&lt;/strong&gt; element, I'm invisible!&lt;/p&gt;
+    </code></pre>
+  </div>
+  <div class="block_half">
+    <h5>CSS</h5>
+    <pre><code class="code_block_css">
+      .display_demo_inline{
+        background-color: orange;
+        display: inline;
+      }
+      .display_demo_block{
+        background-color: green;
+        display: block;
+      }
+      .display_demo_block_sized{
+        background-color: red;
+        display: block;
+        width: 400px;
+        height: 150px;
+      }
+      .display_demo_inline_block{
+        display: inline-block;
+        background-color: cyan;
+        width: 200px;
+        height: 300px;
+      }
+      .display_demo_none{
+        display: none;
+      }
+    </code></pre>
+  </div>
+  <div class="block_full">
+    <h5>Result</h5>
+    <div class="result_box">
+      <div class="display_demo_inline">I'm an <strong>inline</strong> element. I get added to the current line.</div>
+      <div class="display_demo_inline">I'm an <strong>inline</strong> element. I get added to the current line.</div>
+      <div class="display_demo_inline">I'm an <strong>inline</strong> element. I get added to the current line.</div>
+      <div class="display_demo_inline">I'm an <strong>inline</strong> element. I get added to the current line.</div>
+      <div class="display_demo_inline">I'm an <strong>inline</strong> element. I get added to the current line.</div>
+      <p></p>
+      <div class="display_demo_block">I'm a <strong>block</strong> element. I take an entire line for myself.</div>
+      <div class="display_demo_block_sized">I'm also a <strong>block</strong> element. My width and height are resized but I still take an entire line for myself.</div>
+      <p></p>
+      <div class="display_demo_inline">I'm an <strong>inline</strong> element. I get added to the current line.</div>
+      <div class="display_demo_inline_block">I'm an <strong>inline-block</strong> element. I get added to current line but my width and height are resizable</div>
+      <div class="display_demo_inline">I'm an <strong>inline</strong> element. I get added to the current line.</div>
+
+      <p>There's a <strong>display: none</strong> element below me, but you can't see it!</p>
+      <p class="display_demo_none">I'm a <strong>display: none</strong> element, I'm invisible!</p>
+    </div>
+  </div>
+</body>
+</html>
