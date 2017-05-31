@@ -1,0 +1,52 @@
+.menu {
+  background: #D5B0AC;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu span{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  background: #D5B0AC;
+  color: #402E2A;
+}
+
+.menu span:hover{
+  background: #9CD08F;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.menu nav{
+  display: none;
+}
+
+.menu nav nav{
+  top: 0;
+  left: 100%;
+}
+
+.menu span:hover > nav{
+  display: block;
+  position: absolute;
+}
+
+
+/* If the website is viewed on a screen at 768px or wider */
+@media screen and (min-width: 768px){
+  .menu {
+    max-width: 768px;
+    margin: 0 auto;
+    background: deepskyblue;
+  }
+}
+
+/* If the website is viewed by a printer */
+@media print{
+  .menu{
+    font-family: sans-serif;
+  }
+}
