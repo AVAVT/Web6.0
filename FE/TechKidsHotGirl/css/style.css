@@ -1,0 +1,140 @@
+body{
+  background: #dfdfdf;
+}
+
+.header{
+  padding: 15px 0;
+  background: #ffffff;
+  margin-bottom: 20px;
+}
+
+.search_box input[type="text"]{
+  border: 1px solid #ECECEC;
+  padding: 12px 25px 12px 9px;
+  width: 100%;
+}
+
+.search_box .glyphicon-search{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 25px;
+}
+
+.tklogo{
+  color: #1baacc;
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+.tklogo *{
+  vertical-align: middle;
+}
+
+.user_box button{
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #ECECEC;
+  border-left: 0 none;
+  color: #ececec;
+  float: left;
+  font-size: 20px;
+  line-height: 46px;
+}
+.user_box button:last-of-type{
+  margin-right: 12px;
+}
+
+.user_box button:hover{
+  background: #00a0c6;
+  color: #ffffff;
+}
+
+.current_user_name{
+  color: #ececec;
+  border: 1px solid #ececec;
+  line-height: 44px;
+  padding: 0 12px;
+}
+
+.girl_item_content{
+  background: #ffffff;
+  padding: 15px;
+}
+
+.girl_image{
+  width: 100%;
+}
+
+.girl_image_container{
+  position: relative;
+}
+
+.girl_image_container:hover .girl_image_overlay{
+  display: block;
+}
+
+.girl_image_overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+}
+
+.like_button{
+  background: transparent;
+  color: #ffffff;
+  border: 0 none;
+  outline: 0 none;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 20px;
+}
+
+.like_button:hover{
+  background: #ffffff;
+  color: #000000;
+}
+
+.poster_avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-right: 20px;
+  float: left;
+}
+
+.girl_item h3{
+  font-weight: bolder;
+  margin: 0;
+  font-size: 20px;
+}
+
+.girl_item small{
+  color: #ececec;
+}
+
+.girl_item p{
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 992px){
+  body{
+    padding-top: 96px;
+  }
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
