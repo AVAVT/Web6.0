@@ -15,7 +15,8 @@ class App extends Component {
     this.state = {
       items       : [],
       displayItems: [],
-      page        : 1
+      page        : 1,
+      isRequesting: false
     }
 
     this.checkScrollPosition = this.checkScrollPosition.bind(this);
@@ -36,6 +37,11 @@ class App extends Component {
   }
 
   getNewPage(){
+    if(this.state.isRequesting) return;
+    this.setState({
+      isRequesting : true
+    });
+
     $.ajax({
       url : `/imagesData.json?p=${this.state.page}`,
       type: "get"
@@ -49,7 +55,12 @@ class App extends Component {
     }.bind(this))
     .fail(function(err){
       console.error(err);
-    });
+    })
+    .always(function(){
+      this.setState({
+        isRequesting : false
+      });
+    }.bind(this));
   }
 
   filterImages(searchString){
