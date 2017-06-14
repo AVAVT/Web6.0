@@ -12,7 +12,7 @@ class Header extends Component {
             <SearchBox />
 
             <div className="col-md-6 text-center tklogo">
-              <img src="./img/Logo.png" />&nbsp;
+              <img src="./img/Logo.png" alt="Site Logo" />&nbsp;
               HOT GIRLS
             </div>
 

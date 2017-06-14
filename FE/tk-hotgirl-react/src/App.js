@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import Masonry from 'react-masonry-component';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import Header from './components/Header';
 import GirlItem from './components/GirlItem';
@@ -113,15 +116,28 @@ class App extends Component {
     //   return items;
     // }
     // read more: map(), reduce(), filter()
+    // even more: some(), every()
+    
+    const masonryOptions = {
+      columnWidth: '.girl_item',
+      itemSelector: '.girl_item',
+      percentPosition: true
+    };
 
     return (
       <div className="App">
         <Header />
 
         <section className="container">
-          <div className="row">
+          <Masonry
+            className={'row'}
+            elementType={'div'}
+            options={masonryOptions}
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={true}
+            >
             {items}
-          </div>
+          </Masonry>
         </section>
       </div>
     );

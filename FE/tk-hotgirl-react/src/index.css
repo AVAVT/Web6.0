@@ -112,6 +112,10 @@ body{
   float: left;
 }
 
+.girl_item {
+  margin-bottom: 30px;
+}
+
 .girl_item h3{
   font-weight: bolder;
   margin: 0;
